@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome Title{% endblock %}
+{% block head %}Welcome {{ user.username }}{% endblock %}
+
+{% block content %}
+	{% if user.username %}
+		<p>Hello {{ user.username }}</p>
+	{% else %}
+		<p>Please <a href="/login">log in</a>.
+	{% endif %}
+{% endblock %}

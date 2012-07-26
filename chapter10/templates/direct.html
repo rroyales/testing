@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Direct to templates{% endblock %}
+{% block head %}Direct to template welcomes {{ user.username }}{% endblock %}
+
+{% block content %}
+	{% if user.username %}
+		<p>Hello {{ user.username }}</p>
+	{% else %}
+		<p>Please <a href="/login">log in</a>.
+	{% endif %}
+	</br>
+	<a href="/beers/">View the beers list</a>
+	
+	
+{% endblock %}
